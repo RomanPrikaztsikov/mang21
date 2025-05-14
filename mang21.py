@@ -156,7 +156,7 @@ def alusta_mängu():
     arvuti_kaardid = []
     
     try:
-        for _ in range(2):
+        for i in range(2):
             mängija_kaardid.append(loe_kaart())
             arvuti_kaardid.append(loe_kaart())
     except ValueError as e:
@@ -238,12 +238,13 @@ nupp_peatu.place(x=300, y=60, width=80)
 nupp_ajalugu = tk.Button(aken, text="Vaata ajalugu", bg=NUPP_BG, fg=NUPP_FG,
                         activebackground=NUPP_ACTIVE_BG, font=("Arial", 12),
                         command=näita_ajalugu)
-nupp_ajalugu.place(x=380, y=60, width=100)
+nupp_ajalugu.place(x=400, y=60, width=100)
 
-raam_arvuti = tk.Frame(aken, bg=TAUST)
+raam_arvuti = tk.Frame(aken, bg=TAUST, bd=3, highlightbackground="white", highlightthickness=3)
 raam_arvuti.place(x=20, y=120)
-raam_mängija = tk.Frame(aken, bg=TAUST)
+raam_mängija = tk.Frame(aken, bg=TAUST, bd=3, highlightbackground="white", highlightthickness=3)
 raam_mängija.place(x=20, y=320)
+
 
 silt_info = tk.Label(aken, text="", bg=TAUST, fg=FOREGROUND, font=("Arial", 16, "bold"), pady=10)
 silt_info.place(x=20, y=600)
